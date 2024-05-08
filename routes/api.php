@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\dashboard\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\dashboard\ServiceController;
+use App\Http\Controllers\Api\dashboard\VisitorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('about-us', AboutUsController::class);
     Route::post('/updateAboutUs', [AboutUsController::class,'updateAboutUs']);
     Route::resource('service',ServiceController::class);
+    Route::post('/add-visitor', [VisitorController::class,'addVisitor']);
 
 });
 
