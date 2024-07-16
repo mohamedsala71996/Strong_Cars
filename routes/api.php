@@ -27,6 +27,5 @@ Route::post('/logout', [AuthController::class,'logout'])->middleware('auth:sanct
 Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('about-us', AboutUsController::class);
     Route::post('/updateAboutUs', [AboutUsController::class,'updateAboutUs']);
-
 });
 
